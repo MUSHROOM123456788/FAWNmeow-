@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emo princess</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body { background-color: white; color: #ff69b4; font-family: 'Brush Script MT', cursive; }
+h1 { font-size: 36px; margin-top: 50px; text-align: center; }
+</style>
+</head>
+<body>
+
+<h1>Emo princess</h1>
+
+<div class="photo-grid">
+  <div class="photo-box large"><img src="https://picsum.photos/400?random=10" alt="emo1"></div>
+  <div class="photo-box large"><img src="https://picsum.photos/400?random=11" alt="emo2"></div>
+  <div class="photo-box large"><img src="https://picsum.photos/400?random=12" alt="emo3"></div>
+</div>
+
+</body>
+</html>
