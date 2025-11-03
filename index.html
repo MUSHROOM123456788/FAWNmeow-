@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chande’s Website</title>
 <style>
-/* ----------------- GENERAL STYLES ----------------- */
+/* GENERAL STYLES */
 body {
   margin: 0;
   padding: 20px;
@@ -32,33 +32,34 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-color: rgba(255,255,255,0.2);
 }
 
-/* Sizes for main and emo page */
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sizes */
 .small { width: 120px; height: 120px; }
 .medium { width: 180px; height: 180px; }
 .large { width: 240px; height: 240px; }
 
-/* ----------------- MAIN PAGE ----------------- */
+/* MAIN PAGE */
 #main-page {
-  background-color: #ffcce6; /* pink */
+  background-color: #ffcce6; /* soft baby pink */
   color: white;
   min-height: 100vh;
   padding-top: 20px;
 }
-  <!-- Photo grid -->
-<div class="photo-grid">
-  <!-- Top row small -->
-  <div class="photo-box small"><img src="html/Unknown 10.jpeg" alt="fawn 1"></div>
-  <div class="photo-box small"><img src="html/Unknown 8.jpeg" alt="fawn 2"></div>
-  <div class="photo-box small"><img src="html/Unknown 12.jpeg" alt="fawn 3"></div>
-</div>
+
 #main-page h1 {
   font-size: 28px;
   margin-bottom: 30px;
 }
 
-/* Seal button */
+/* SEAL BUTTON */
 .next-page-btn {
   display: block;
   margin: 40px auto 60px auto;
@@ -70,7 +71,7 @@ body {
   z-index: 10;
 }
 
-/* ----------------- EMO PAGE ----------------- */
+/* EMO PAGE */
 #emo-page {
   display: none;
   background-color: white;
@@ -87,7 +88,7 @@ body {
   margin-bottom: 40px;
 }
 
-/* ----------------- EMOJIS ----------------- */
+/* EMOJIS */
 .emoji-circle {
   position: absolute;
   top: 0;
@@ -113,15 +114,15 @@ body {
   <div class="emoji-circle" id="emoji-circle-main"></div>
 
   <div class="photo-grid">
-    <div class="photo-box small"></div>
-    <div class="photo-box small"></div>
-    <div class="photo-box small"></div>
-    <div class="photo-box medium"></div>
-    <div class="photo-box medium"></div>
-    <div class="photo-box medium"></div>
-    <div class="photo-box large"></div>
-    <div class="photo-box large"></div>
-    <div class="photo-box large"></div>
+    <div class="photo-box small"><img src="" alt="photo1"></div>
+    <div class="photo-box small"><img src="" alt="photo2"></div>
+    <div class="photo-box small"><img src="" alt="photo3"></div>
+    <div class="photo-box medium"><img src="" alt="photo4"></div>
+    <div class="photo-box medium"><img src="" alt="photo5"></div>
+    <div class="photo-box medium"><img src="" alt="photo6"></div>
+    <div class="photo-box large"><img src="" alt="photo7"></div>
+    <div class="photo-box large"><img src="" alt="photo8"></div>
+    <div class="photo-box large"><img src="" alt="photo9"></div>
   </div>
 
   <button id="seal-btn" class="next-page-btn">🦭</button>
@@ -134,15 +135,15 @@ body {
   <div class="emoji-circle" id="emoji-circle-emo"></div>
 
   <div class="photo-grid">
-    <div class="photo-box small"></div>
-    <div class="photo-box small"></div>
-    <div class="photo-box small"></div>
-    <div class="photo-box medium"></div>
-    <div class="photo-box medium"></div>
-    <div class="photo-box medium"></div>
-    <div class="photo-box large"></div>
-    <div class="photo-box large"></div>
-    <div class="photo-box large"></div>
+    <div class="photo-box small"><img src="" alt="emo1"></div>
+    <div class="photo-box small"><img src="" alt="emo2"></div>
+    <div class="photo-box small"><img src="" alt="emo3"></div>
+    <div class="photo-box medium"><img src="" alt="emo4"></div>
+    <div class="photo-box medium"><img src="" alt="emo5"></div>
+    <div class="photo-box medium"><img src="" alt="emo6"></div>
+    <div class="photo-box large"><img src="" alt="emo7"></div>
+    <div class="photo-box large"><img src="" alt="emo8"></div>
+    <div class="photo-box large"><img src="" alt="emo9"></div>
   </div>
 </div>
 
