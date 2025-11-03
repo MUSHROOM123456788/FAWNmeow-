@@ -1,0 +1,10 @@
+CHANDE_WEBSITE/
+│
+├── index.html
+├── emo.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
