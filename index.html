@@ -3,116 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chande’s Website</title>
-<style>
-/* GENERAL STYLES */
-body {
-  margin: 0;
-  padding: 20px;
-  font-family: 'Times New Roman', serif;
-  text-align: center;
-  overflow-y: auto;
-  position: relative;
-  min-height: 100vh;
-}
-
-/* PHOTO GRID */
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-items: center;
-  margin-bottom: 50px;
-}
-
-.photo-box {
-  border: 3px solid currentColor;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: rgba(255,255,255,0.2);
-}
-
-.photo-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Sizes */
-.small { width: 120px; height: 120px; }
-.medium { width: 180px; height: 180px; }
-.large { width: 240px; height: 240px; }
-
-/* MAIN PAGE */
-#main-page {
-  background-color: #ffcce6; /* soft baby pink */
-  color: white;
-  min-height: 100vh;
-  padding-top: 20px;
-}
-
-#main-page h1 {
-  font-size: 28px;
-  margin-bottom: 30px;
-}
-
-/* SEAL BUTTON */
-.next-page-btn {
-  display: block;
-  margin: 40px auto 60px auto;
-  font-size: 80px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  z-index: 10;
-}
-
-/* EMO PAGE */
-#emo-page {
-  display: none;
-  background-color: white;
-  color: #ff69b4;
-  font-family: 'Brush Script MT', cursive;
-  text-align: center;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-#emo-page h1 {
-  font-size: 36px;
-  margin-top: 50px;
-  margin-bottom: 40px;
-}
-
-/* EMOJIS */
-.emoji-circle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.emoji-circle span {
-  position: absolute;
-  font-size: 40px;
-}
-</style>
+<title>Hi. *meow* (fawn’s page) 🦌</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- MAIN PAGE -->
 <div id="main-page">
   <h1>Hi. *meow* (fawn’s page) 🦌</h1>
 
-  <div class="emoji-circle" id="emoji-circle-main" style="position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:20;"></div>
+  <div class="emoji-circle" id="emoji-circle-main"></div>
 
+  <button id="seal-btn" class="next-page-btn">🦭</button>
+</div>
+
+<div id="emo-page">
+  <h1>Emo princess</h1>
+  <div class="emoji-circle" id="emoji-circle-emo"></div>
+
+  
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
   <div class="photo-grid">
     <div class="photo-box small"><img src="https://github.com/MUSHROOM123456788/FAWNmeow-/blob/df99f693dcda14cee86ba5e15935610db45b88e3/Unknown%2010.jpeg" alt="photo1"></div>
     <div class="photo-box small"><img src="https://github.com/MUSHROOM123456788/FAWNmeow-/blob/df99f693dcda14cee86ba5e15935610db45b88e3/Unknown%2011.jpeg" alt="photo2"></div>
@@ -121,96 +34,4 @@ body {
     <div class="photo-box medium"><img src="https://github.com/MUSHROOM123456788/FAWNmeow-/blob/df99f693dcda14cee86ba5e15935610db45b88e3/Unknown%208.jpeg" alt="photo5"></div>
     <div class="photo-box medium"><img src="https://github.com/MUSHROOM123456788/FAWNmeow-/blob/df99f693dcda14cee86ba5e15935610db45b88e3/Unknown%209.jpeg" alt="photo6"></div>
     <div class="photo-box 
-  <button id="seal-btn" class="next-page-btn">🦭</button>
-</div>
-
-<!-- EMO PAGE -->
-<div id="emo-page">
-  <h1>Emo princess</h1>
-
-  <div class="emoji-circle" id="emoji-circle-emo"></div>
-
-  <div class="photo-grid">
-    <div class="photo-box small"><img src="" alt="emo1"></div>
-    <div class="photo-box small"><img src="" alt="emo2"></div>
-    <div class="photo-box small"><img src="" alt="emo3"></div>
-    <div class="photo-box medium"><img src="" alt="emo4"></div>
-    <div class="photo-box medium"><img src="" alt="emo5"></div>
-    <div class="photo-box medium"><img src="" alt="emo6"></div>
-    <div class="photo-box large"><img src="" alt="emo7"></div>
-    <div class="photo-box large"><img src="" alt="emo8"></div>
-    <div class="photo-box large"><img src="" alt="emo9"></div>
-  </div>
-</div>
-
-<script>
-// ----------------- SEAL BUTTON -----------------
-document.getElementById('seal-btn').addEventListener('click', () => {
-  document.getElementById('main-page').style.display = 'none';
-  document.getElementById('emo-page').style.display = 'block';
-});
-
-// ----------------- EMOJI ANIMATION -----------------
-function animateEmoji(containerId) {
-  const emojiList = ['🦨','🦊','🦅','🐹','🐈‍⬛','🐰','🦇','🦭','🐋','🦦','🦝','🐇','🦔','🌸','🪻','🍓','🍒','⛸️'];
-  const container = document.getElementById(containerId);
-  const emojis = emojiList.map(emoji => {
-    const span = document.createElement('span');
-    span.textContent = emoji;
-    container.appendChild(span);
-    return span;
-  });
-
-  let t = 0;
-  function animate() {
-    const width = window.innerWidth;
-    const height = document.body.scrollHeight;
-    const padding = 30;
-
-    emojis.forEach((el, i) => {
-      const total = emojis.length;
-      const phase = (i / total + t / 300) % 1;
-
-      let x=0, y=0;
-      if(phase < 0.25){
-        const p = phase / 0.25;
-        x = padding + p*(width-2*padding);
-        y = padding;
-      } else if(phase < 0.5){
-        const p = (phase-0.25)/0.25;
-        x = width-padding;
-        y = padding + p*(height-2*padding);
-      } else if(phase < 0.75){
-        const p = (phase-0.5)/0.25;
-        x = width-padding - p*(width-2*padding);
-        y = height-padding;
-      } else {
-        const p = (phase-0.75)/0.25;
-        x = padding;
-        y = height-padding - p*(height-2*padding);
-      }
-
-      el.style.left = `${x}px`;
-      el.style.top = `${y}px`;
-    });
-
-    t += 1;
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-}
-
-// Animate emojis on both pages
-document.addEventListener('DOMContentLoaded', () => {
-  animateEmoji('emoji-circle-main');
-  animateEmoji('emoji-circle-emo');
-});
-</script>
-
-</body>
-</html>
-.next-page-btn {
-  position: relative;
-  z-index: 30; /* ensures button stays above emojis */
-}
+  
