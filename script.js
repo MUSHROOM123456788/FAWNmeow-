@@ -1,3 +1,8 @@
+// Make the seal button open the Emo page
+document.getElementById('seal-btn').addEventListener('click', () => {
+  document.getElementById('main-page').style.display = 'none';
+  document.getElementById('emo-page').style.display = 'block';
+});
 // Seal button
 document.getElementById('seal-btn').addEventListener('click', () => {
     window.location.href = 'emo.html';
